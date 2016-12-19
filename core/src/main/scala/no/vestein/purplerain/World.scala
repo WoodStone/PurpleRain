@@ -1,6 +1,6 @@
 package no.vestein.purplerain
 
-import com.sun.media.jfxmediaimpl.MediaDisposer.Disposable
+import com.badlogic.gdx.utils.Disposable
 
 /**
   * Created by Vestein Dahl
