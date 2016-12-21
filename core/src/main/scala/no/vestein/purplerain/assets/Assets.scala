@@ -4,11 +4,6 @@ import com.badlogic.gdx.Gdx
 import com.badlogic.gdx.assets.{AssetDescriptor, AssetErrorListener, AssetManager}
 import com.badlogic.gdx.utils.Disposable
 
-/**
-  * Created by Vestein Dahl
-  * Date: 18.11.2016
-  * Time: 16.10
-  */
 object Assets extends Disposable with AssetErrorListener {
 
   private var assetManager: AssetManager = _

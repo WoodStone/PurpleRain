@@ -6,11 +6,6 @@ import com.badlogic.gdx.graphics.g2d.BitmapFont
 import com.badlogic.gdx.graphics.g2d.freetype.FreeTypeFontGenerator
 import no.vestein.purplerain.Reference
 
-/**
-  * Created by Vestein Dahl
-  * Date: 18.11.2016
-  * Time: 16.13
-  */
 class AssetFonts {
 
   private val TAG: String = getClass.getName

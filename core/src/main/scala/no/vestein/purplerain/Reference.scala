@@ -1,10 +1,5 @@
 package no.vestein.purplerain
 
-/**
-  * Created by Vestein Dahl
-  * Date: 19.12.2016
-  * Time: 15.50
-  */
 object Reference {
 
   val WIDTH: Int = 800

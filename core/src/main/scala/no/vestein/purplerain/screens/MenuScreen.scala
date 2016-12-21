@@ -11,11 +11,6 @@ import com.badlogic.gdx.{Game, Gdx}
 import no.vestein.purplerain.Reference
 import no.vestein.purplerain.assets.Assets
 
-/**
-  * Created by Vestein Dahl
-  * Date: 19.12.2016
-  * Time: 15.47
-  */
 class MenuScreen(game: Game) extends AbstractScreen(game) {
   private var stage: Stage = _
   private var imgLogo: Image = _

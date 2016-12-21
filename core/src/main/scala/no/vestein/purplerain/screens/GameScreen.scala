@@ -4,11 +4,6 @@ import com.badlogic.gdx.graphics.GL20
 import com.badlogic.gdx.{Game, Gdx}
 import no.vestein.purplerain.{Renderer, World}
 
-/**
-  * Created by Vestein Dahl
-  * Date: 19.12.2016
-  * Time: 15.53
-  */
 class GameScreen(game: Game) extends AbstractScreen(game) {
 
   private val world: World = new World
