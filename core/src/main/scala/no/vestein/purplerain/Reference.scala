@@ -2,11 +2,11 @@ package no.vestein.purplerain
 
 object Reference {
 
-  val WIDTH: Int = 800
-  val HEIGHT: Int = 600
-  val VIEWPORT_WIDTH: Float = 32.0f
-  val VIEWPORT_HEIGHT: Float = 32.0f
-  val VIEWPORT_WIDTH_UI: Float = WIDTH.toFloat
-  val VIEWPORT_HEIGHT_UI: Float = HEIGHT.toFloat
+  val Width: Int = 800
+  val Height: Int = 600
+  val ViewportWidth: Float = 32.0f
+  val ViewportHeight: Float = 32.0f
+  val ViewportWidthUI: Float = Width.toFloat
+  val ViewportHeightUI: Float = Height.toFloat
 
 }
