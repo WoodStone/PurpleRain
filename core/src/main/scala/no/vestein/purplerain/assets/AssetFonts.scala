@@ -9,16 +9,16 @@ import no.vestein.purplerain.Reference
 class AssetFonts {
 
   private val TAG: String = getClass.getName
-  val sourceCodeRegularScaling: BitmapFont = loadScalingFont()
+  val sourceCodeRegularScaling: BitmapFont = scalingFont
 
-  private def loadScalingFont(): BitmapFont = {
-    val SCALE: Float = 1.0f * Gdx.graphics.getWidth / Reference.VIEWPORT_WIDTH_UI
+  private def scalingFont: BitmapFont = {
+    val scale: Float = 1.0f * Gdx.graphics.getWidth / Reference.ViewportWidthUI
     val generator: FreeTypeFontGenerator= new FreeTypeFontGenerator(Gdx.files.internal("SourceCodePro-Regular.ttf"))
 
     val parameter: FreeTypeFontGenerator.FreeTypeFontParameter = new FreeTypeFontGenerator.FreeTypeFontParameter
-    parameter.size = (24 * SCALE).asInstanceOf[Int]
+    parameter.size = (24 * scale).asInstanceOf[Int]
     val font: BitmapFont = generator.generateFont(parameter)
-    font.getData.setScale(1.0f / SCALE)
+    font.getData.setScale(1.0f / scale)
     font.getRegion.getTexture.setFilter(Texture.TextureFilter.Linear, Texture.TextureFilter.Linear)
     font
   }

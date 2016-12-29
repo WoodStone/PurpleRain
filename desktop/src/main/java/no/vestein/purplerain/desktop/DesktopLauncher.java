@@ -8,8 +8,8 @@ import no.vestein.purplerain.Reference;
 public class DesktopLauncher {
 	public static void main (String[] arg) {
 		LwjglApplicationConfiguration config = new LwjglApplicationConfiguration();
-		config.width = Reference.WIDTH();
-		config.height = Reference.HEIGHT();
+		config.width = Reference.Width();
+		config.height = Reference.Height();
 		config.samples = 0;
 		new LwjglApplication(PurpleRain$.MODULE$, config);
 	}

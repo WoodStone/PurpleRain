@@ -8,12 +8,12 @@ import com.badlogic.gdx.math.{MathUtils, Vector2}
 class CameraHelper {
   private val MaxZoomIn: Float = 0.25f
   private val MaxZoomOut: Float = 10.0f
-  private var position: Vector2 = new Vector2()
+  private val position: Vector2 = new Vector2()
   private var zoom: Float = 1.0f
   private var target: Sprite = _
 
   def update(deltaTime: Float) {
-    if (!hastarget) return
+    if (!hasTarget) return
     position.x = target.getX + target.getOriginX
     position.y = target.getY + target.getOriginY
   }
@@ -40,9 +40,9 @@ class CameraHelper {
 
   def getTarget: Sprite = target
 
-  def hastarget: Boolean = target != null
+  def hasTarget: Boolean = target != null
 
-  def hastarget(target: Sprite): Boolean = hastarget && this.target == target
+  def hasTarget(target: Sprite): Boolean = hasTarget && this.target == target
 
   def applyTo(camera: OrthographicCamera) {
     camera.position.x = position.x

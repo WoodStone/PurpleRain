@@ -23,7 +23,7 @@ class MenuScreen(game: Game) extends AbstractScreen(game) {
 
     stage.clear()
     stage.addActor(stack)
-    stack.setSize(Reference.VIEWPORT_WIDTH_UI, Reference.VIEWPORT_HEIGHT_UI)
+    stack.setSize(Reference.ViewportWidthUI, Reference.ViewportHeightUI)
     stack.add(layerLogos)
     stack.add(layerButtons)
   }
@@ -86,7 +86,7 @@ class MenuScreen(game: Game) extends AbstractScreen(game) {
   }
 
   override def show(): Unit = {
-    stage = new Stage(new StretchViewport(Reference.VIEWPORT_WIDTH_UI, Reference.VIEWPORT_HEIGHT_UI))
+    stage = new Stage(new StretchViewport(Reference.ViewportWidthUI, Reference.ViewportHeightUI))
     Gdx.input.setInputProcessor(stage)
     rebuildStage()
   }
@@ -98,4 +98,10 @@ class MenuScreen(game: Game) extends AbstractScreen(game) {
   override def pause(): Unit = {
 
   }
+
+  override def resume(): Unit = {
+
+  }
+
+  override def dispose(): Unit = ???
 }

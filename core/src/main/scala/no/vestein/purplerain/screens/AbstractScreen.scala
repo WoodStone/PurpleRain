@@ -9,13 +9,7 @@ abstract class AbstractScreen(protected var game: Game) extends Screen {
   def show()
   def hide()
   def pause()
-
-  def resume(): Unit = {
-
-  }
-
-  def dispose(): Unit = {
-
-  }
+  def resume()
+  def dispose()
 
 }

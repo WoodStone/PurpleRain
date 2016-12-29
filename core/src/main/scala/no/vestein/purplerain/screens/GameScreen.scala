@@ -2,12 +2,13 @@ package no.vestein.purplerain.screens
 
 import com.badlogic.gdx.graphics.GL20
 import com.badlogic.gdx.{Game, Gdx}
-import no.vestein.purplerain.{Renderer, World}
+import no.vestein.purplerain.World
+import no.vestein.purplerain.render.Renderer
 
 class GameScreen(game: Game) extends AbstractScreen(game) {
 
   private val world: World = new World
-  private val renderer: Renderer = new Renderer
+  private val renderer: Renderer = new Renderer(world)
   private var paused: Boolean = false
 
   override def render(deltaTime: Float): Unit = {
@@ -25,10 +26,23 @@ class GameScreen(game: Game) extends AbstractScreen(game) {
     renderer.resize(width, height)
   }
 
-  override def show(): Unit = ???
+  override def show(): Unit = {
+    Gdx.app.debug(getClass.getSimpleName, "Initializing...")
+    world.init()
+    renderer.init()
+    Gdx.app.debug(getClass.getSimpleName, "Done.")
+  }
 
   override def hide(): Unit = ???
 
-  override def pause(): Unit = ???
+  override def pause(): Unit = {
+    paused = true
+  }
+
+  override def resume(): Unit = {
+    paused = false
+  }
+
+  override def dispose(): Unit = ???
 
 }
