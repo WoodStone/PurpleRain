@@ -18,7 +18,7 @@ private object RainDropSprite {
   private def pixmap: PixmapPR = {
     val pixmap: PixmapPR = new PixmapPR(width, height, com.badlogic.gdx.graphics.Pixmap.Format.RGBA8888)
     Pixmap.setBlending(Pixmap.Blending.None)
-    pixmap.setColor(0x80/255.0f, 0x00/255.0f, 0x80/255.0f, 0xff/255.0f)
+    pixmap.setColor(0x8A/255.0f, 0x2B/255.0f, 0xE2/255.0f, 0xff/255.0f)
     pixmap.fillRectangle(0, 0, width, height)
     pixmap
   }
