@@ -67,7 +67,7 @@ class MenuScreen(game: Game) extends AbstractScreen(game) {
     textButtonStyle.checked = skin.newDrawable("background", Color.WHITE)
     textButtonStyle.over = skin.newDrawable("background", new Color(0xd0d0d050))
     textButtonStyle.font = skin.getFont("default")
-    textButtonStyle.fontColor = Color.PINK
+    textButtonStyle.fontColor = Color.PURPLE
     skin.add("default", textButtonStyle)
 
     skin

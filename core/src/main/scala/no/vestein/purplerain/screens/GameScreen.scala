@@ -16,7 +16,7 @@ class GameScreen(game: Game) extends AbstractScreen(game) {
       world.update(deltaTime)
     }
 
-    Gdx.gl.glClearColor(0xff/255.0f, 0xff/255.0f, 0xff/255.0f, 0xff/255.0f)
+    Gdx.gl.glClearColor(0xE6/255.0f, 0xE6/255.0f, 0xFA/255.0f, 0xff/255.0f)
     Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT)
 
     renderer.render()
@@ -28,12 +28,15 @@ class GameScreen(game: Game) extends AbstractScreen(game) {
 
   override def show(): Unit = {
     Gdx.app.debug(getClass.getSimpleName, "Initializing...")
+    val startTime = System.currentTimeMillis()
     world.init()
     renderer.init()
-    Gdx.app.debug(getClass.getSimpleName, "Done.")
+    Gdx.app.debug(getClass.getSimpleName, "Done. " + (System.currentTimeMillis() - startTime) + "ms")
   }
 
-  override def hide(): Unit = ???
+  override def hide(): Unit = {
+
+  }
 
   override def pause(): Unit = {
     paused = true
