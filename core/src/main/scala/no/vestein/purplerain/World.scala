@@ -8,6 +8,7 @@ import scala.annotation.tailrec
 
 class World extends Disposable {
 
+  val modifier: Float = Reference.ViewportWidth + Reference.ViewportWidth/4
   val cameraHelper: CameraHelper = new CameraHelper()
   cameraHelper.setPosition(0.0f, 0.0f)
   cameraHelper.setZoom(1.0f)
@@ -44,10 +45,9 @@ class World extends Disposable {
     cameraHelper.update(deltaTime)
 
     drops = drops.map(drop => {
-      val mod = Reference.ViewportWidth + Reference.ViewportWidth/4
-      if (drop.position.y < -mod/2) {
+      if (drop.position.y < -modifier/2) {
         val x: Float = Math.random().toFloat * 32.0f - 16.0f
-        drop.setPosition(x, drop.position.y + mod).applyForce()
+        drop.setPosition(x, drop.position.y + modifier).applyForce()
       } else {
         drop.applyForce()
       }
