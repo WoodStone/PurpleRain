@@ -9,4 +9,6 @@ object Reference {
   val ViewportWidthUI: Float = Width.toFloat
   val ViewportHeightUI: Float = Height.toFloat
 
+  val snowFlake: String = "snowflake.png"
+
 }
